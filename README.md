@@ -4,12 +4,9 @@
 <br>
 
 
-**RAVEN8 è una piattaforma avanzata di penetration testing automatizzato** che sfrutta l'Intelligenza Artificiale Generativa (GenAI) per identificare le vulnerabilità critiche e memorizza i risultati in un database vettoriale per correlazioni avanzate.  
-Progettato per security analyst, red team e penetration tester, combina automazione avanzata con analisi intelligente per:
-- Scansionare target web in modo autonomo
-- Identificare vulnerabilità critiche
-- Generare report dettagliati con remediation
+**AdFlow è un’automazione di IA generativa che semplifica e potenzia la gestione delle campagne pubblicitarie multi piattaforma** come Google Ads, Meta Ads e TikTok Ads. Grazie a un sistema di agenti intelligenti, AdFlow crea, ottimizza e aggiorna automaticamente le inserzioni, massimizzando i risultati e riducendo il tempo dedicato alla gestione manuale delle campagne.
 
+Challenge di riferimento: **Bhblasted - Campaign Syncer: Automating Multi-Platform Advertising Campaigns** 
 ## Prerequisiti
 - Docker e Docker Compose installati
 - Account per i servizi e API: 
