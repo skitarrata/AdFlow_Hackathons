@@ -1,0 +1,50 @@
+services:
+  # Reverse Proxy Traefik con gestione automatica certificati
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false" # Solo container esplicitamente abilitati
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.le.acme.tlschallenge=true"
+      - "--certificatesresolvers.le.acme.email=${LETSENCRYPT_EMAIL}" # MODIFICARE
+      - "--certificatesresolvers.le.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./letsencrypt:/letsencrypt" # Storage certificati
+    networks:
+      - traefik-net
+
+  # Servizio n8n su Kali (esposto via HTTPS)
+  kali-n8n:
+    build:
+      context: ./n8n
+    container_name: n8nio
+    environment:
+      - N8N_HOST=${SUBDOMAIN_NAME}
+      - N8N_PROTOCOL=https
+      - WEBHOOK_URl=https://${SUBDOMAIN_NAME}/
+      - N8N_PROXY_HOPS=1
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.n8n.rule=Host(`${SUBDOMAIN_NAME}`)" # MODIFICARE
+      - "traefik.http.routers.n8n.entrypoints=websecure"
+      - "traefik.http.routers.n8n.tls.certresolver=le"
+      - "traefik.http.services.n8n.loadbalancer.server.port=5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+    networks:
+      - traefik-net
+    restart: unless-stopped
+
+volumes:
+  n8n_data:
+
+networks:
+  traefik-net:
+    driver: bridge

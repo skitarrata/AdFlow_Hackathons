@@ -1,0 +1,1977 @@
+{
+  "name": "AdFlow",
+  "nodes": [
+    {
+      "parameters": {
+        "formId": "n0x9MaGH"
+      },
+      "type": "n8n-nodes-base.typeformTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -512,
+        80
+      ],
+      "id": "d257093b-ee59-46c5-9a9d-74992333f968",
+      "name": "Typeform Trigger",
+      "webhookId": "e2808dfb-a1a4-4fe5-8df3-c9ae968973d6",
+      "credentials": {
+        "typeformApi": {
+          "id": "bIdtXirpoHhLCccD",
+          "name": "Typeform account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "17oDP2zXaD6-D26UF-UNh6AjWFOB9l15klw3b6Xyk2Rc",
+          "mode": "list",
+          "cachedResultName": "AdFlow Hackaton - Marco | Saverio",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17oDP2zXaD6-D26UF-UNh6AjWFOB9l15klw3b6Xyk2Rc/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Foglio1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10xigI6lB7Q-aVI-OipAGJ34EkXcWcG4KcoOqZ7VafD0/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nome Campagna": "={{ $json['Inserisci il nome della campagna pubblicitaria'] }}",
+            "Nome Azienda/Brand": "={{ $json['Qual è il nome dell\\'azienda o del brand?'] }}",
+            "Descrizione Prodotto/Servizio": "={{ $json['Descrivi brevemente il prodotto o servizio da promuovere'] }}",
+            "Nome Prodotto": "={{ $json['Come si chiama il prodotto o servizio?'] }}",
+            "Obiettivo Campagna": "={{ [].concat($json[\"Qual è l'obiettivo principale della campagna?\"]).join(\", \") }}",
+            "Target Audience": "={{ $json['A chi si rivolge il prodotto?'] }}",
+            "Valori/Messaggi Chiave": "={{ $json['Quali sono i valori o i messaggi chiave da comunicare?'] }}",
+            "Budget (€)": "={{ $json['Qual è il budget stimato (in €)?'] }}",
+            "Link Sito Azienda": "={{ $json['Aggiungi il sito web dell\\'azienda'] }}"
+          },
+          "matchingColumns": [
+            "Nome Campagna"
+          ],
+          "schema": [
+            {
+              "id": "Nome Campagna",
+              "displayName": "Nome Campagna",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nome Azienda/Brand",
+              "displayName": "Nome Azienda/Brand",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Descrizione Prodotto/Servizio",
+              "displayName": "Descrizione Prodotto/Servizio",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nome Prodotto",
+              "displayName": "Nome Prodotto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Obiettivo Campagna",
+              "displayName": "Obiettivo Campagna",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Target Audience",
+              "displayName": "Target Audience",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Valori/Messaggi Chiave",
+              "displayName": "Valori/Messaggi Chiave",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Budget (€)",
+              "displayName": "Budget (€)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Link Sito Azienda",
+              "displayName": "Link Sito Azienda",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Campagna Google Ads",
+              "displayName": "Campagna Google Ads",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Campagna Meta Ads",
+              "displayName": "Campagna Meta Ads",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Campagna Tiktok Ads",
+              "displayName": "Campagna Tiktok Ads",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -288,
+        80
+      ],
+      "id": "c0f44f57-f155-4d41-9080-10b6dd6a286f",
+      "name": "Inserire dati nello spreadsheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "peWXZrFyPVYUFFIl",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -64,
+        608
+      ],
+      "id": "bea45393-ad73-4ce3-a3fb-09bd9aebd72a",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QMxZCD03BVzg7x5C",
+          "name": "Google Gemini(PaLM) Api Simone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=- Nome della campagna: {{ $json['Nome Campagna'] }} \n- Brand: {{ $json['Nome Azienda/Brand'] }}\n- Nome del prodotto/servizio: {{ $json['Nome Prodotto'] }}\n- Descrizione del prodotto/servizio: {{ $json['Descrizione Prodotto/Servizio'] }}\n- Obiettivo principale della campagna: {{ $json['Obiettivo Campagna'] }}\n- Target di riferimento: {{ $json['Target Audience'] }}\n- Valori o messaggi chiave da comunicare: {{ $json['Valori/Messaggi Chiave'] }}\n- Budget stimato (€): {{ $json['Budget (€)'] }}\n- Sito dell'azienda (per capire come comunica l'azienda es. colori, font, brending, slogan ecc.): {{ $json['Link Sito Azienda'] }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Sei un **Media Strategist** esperto di comunicazione e brand identity.  \nIl tuo compito è **generare una campagna pubblicitaria base** in formato **JSON** utilizzando i dati forniti.  \nLa campagna deve essere coerente con il tono del brand e adattata al target di riferimento.\n\n### DATI CHE RICEVERAI COME INPUT\n- Nome della campagna:  \n- Brand:  \n- Nome del prodotto/servizio:  \n- Descrizione del prodotto/servizio:  \n- Obiettivo principale della campagna:\n- Target di riferimento:  \n- Valori o messaggi chiave da comunicare:\n- Budget stimato (€): \n- Tone of voice richiesto (se disponibile): \n- Punti di forza/benefici principali:\n\n### ISTRUZIONI\n1. Analizza i dati forniti e genera una proposta pubblicitaria coerente e sintetica.  \n2. Mantieni uno stile professionale ma creativo, adatto alla comunicazione strategica.  \n3. L’output deve essere in **formato JSON**, con le seguenti chiavi:\n\n{\n  \"messaggio_chiave\": \"Sintesi dell’idea principale della campagna\",\n  \"USP\": \"Unique Selling Proposition chiara e distintiva\",\n  \"struttura_narrativa\": \"Breve schema della storia o del messaggio pubblicitario\",\n  \"tono\": \"Descrizione del tono comunicativo e del linguaggio usato\",\n  \"messaggio_principale\": \"Il messaggio completo che rappresenta la campagna\"\n}\n4. Non iserire i tag json nell'output (es: ```json)\n\n### ESEMPIO DI INPUT\n{\n  \"nome_campagna\": \"MilkAds\",\n  \"brand\": \"Milka\",\n  \"prodotto\": \"Milka Almond\",\n  \"descrizione\": \"Cioccolata al latte con le mandorle\",\n  \"obiettivo\": \"Promuovere un nuovo prodotto\",\n  \"target\": \"Bambini e Mamme\",\n  \"valori\": \"qualità, bontà\",\n  \"budget\": 25,\n  \"Sito dell'azienda\": https://www.milka.com/it/\n}\n\n### OUTPUT ATTESO (ESEMPIO)\n{\n  \"messaggio_chiave\": \"La dolcezza che unisce grandi e piccini\",\n  \"USP\": \"L’unica cioccolata al latte Milka con croccanti mandorle tostate, dal gusto autentico e avvolgente\",\n  \"struttura_narrativa\": \"Una mamma e suo figlio condividono un momento di tenerezza grazie a una tavoletta di Milka Almond, simbolo di dolcezza e legame familiare.\",\n  \"tono\": \"Caldo, familiare, rassicurante\",\n  \"messaggio_principale\": \"Milka Almond — la nuova dolcezza con mandorle tostate che trasforma ogni pausa in un abbraccio.\"\n}\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -32,
+        -432
+      ],
+      "id": "4d6b28d7-33b1-4151-8503-fbbf1434bb94",
+      "name": "Base Campaign Generator"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -64,
+        -208
+      ],
+      "id": "3ed97929-6b99-486f-bf69-24fe1687985f",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QMxZCD03BVzg7x5C",
+          "name": "Google Gemini(PaLM) Api Simone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Basati sulle informazioni che ti sto dando per dividere il budget dell'azienda per le varie piattaforme di advertising, nello specifico: Google Ads, TikTok Ads, Meta Ads. Limitati a dividere il budget che vedi nelle info, non commentarlo.\n\n- Brand: {{ $json['Nome Azienda/Brand'] }}\n- Nome del prodotto/servizio: {{ $json['Nome Prodotto'] }}\n- Descrizione del prodotto/servizio: {{ $json['Descrizione Prodotto/Servizio'] }}\n- Obiettivo principale della campagna: {{ $json['Obiettivo Campagna'] }}\n- Target di riferimento: {{ $json['Target Audience'] }}\n- Valori o messaggi chiave da comunicare: {{ $json['Valori/Messaggi Chiave'] }}\n- Budget stimato (€): {{ $json['Budget (€)'] }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Sei un esperto digital marketing strategist specializzato in media planning e budget allocation. Il tuo compito è analizzare le informazioni di una campagna pubblicitaria e decidere autonomamente come distribuire il budget tra Meta Ads, Google Ads e TikTok Ads nel modo più efficace.\nInformazioni che riceverai sulla campagna:\n\nNome Campagna\nNome Azienda/Brand\nDescrizione Prodotto/Servizio\nNome Prodotto\nObiettivo Campagna (es: Aumentare vendite, Generare Lead, Far conoscere il brand, Promuovere nuovo prodotto, Creare campagna virale)\nTarget Audience\nValori/Messaggi Chiave\nBudget totale (€)\nLink Sito Azienda\n\nIl tuo compito:\nAnalizza attentamente tutte le informazioni e decidi come allocare il budget considerando:\n\nIl tipo di obiettivo: awareness richiede visibilità, conversioni richiedono intent, lead richiedono targeting preciso\nIl target audience: età, comportamenti online, dove passano il tempo (es: Gen Z su TikTok, professionisti su Google, famiglie su Meta)\nIl prodotto/servizio: prezzo, ciclo di acquisto, complessità della decisione d'acquisto\nIl brand: è noto o nuovo? Richiede brand building o può puntare diretto alla conversione?\nIl budget disponibile: con budget bassi, concentrati; con budget alti, diversifica\nI messaggi chiave: alcuni messaggi funzionano meglio su certe piattaforme\n\nPrincipi guida per piattaforma:\n\nMeta Ads: ottimo per targeting demografico/interessi, storytelling visivo, retargeting, community mature (25-55 anni)\nGoogle Ads: cattura l'intent di ricerca, perfetto per lead/vendite quando c'è già interesse, B2B, search-driven\nTikTok Ads: pubblico giovane (16-35), content virale, awareness, prodotti visual/trend, autenticità\n\nEsempio di input: \n\nBasati sulle informazioni che ti sto dando per dividere il budget dell'azienda per le varie piattaforme di advertising, nello specifico: Google Ads, TikTok Ads, Meta Ads. Limitati a dividere il budget che vedi nelle info, non commentarlo.\n\n- Brand:\n- Nome del prodotto/servizio:\n- Descrizione del prodotto/servizio: \n- Obiettivo principale della campagna: \n- Target di riferimento: \n- Valori o messaggi chiave da comunicare: \n- Budget stimato (€): \n\nesempio di output: \n\n{\n  \"budget_allocation\": {\n    \"meta\": [importo],\n    \"google\": [importo],\n    \"tiktok\": [importo]\n  },\n  \"reasoning\": \"Breve spiegazione (max 2-3 righe) del ragionamento strategico dietro questa allocazione\"\n}\n\nNOTA BENE: Non iserire i tag json nell'output (es: ```json)"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -32,
+        384
+      ],
+      "id": "35cc1fc2-1be5-489f-aa98-ad12d3d495c2",
+      "name": "Media Planner"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        64,
+        -208
+      ],
+      "id": "fd571f54-3694-492b-a998-2ded0df6bfff",
+      "name": "Auto-fixing Output Parser"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        80,
+        0
+      ],
+      "id": "428023f1-4be6-47d5-be4d-7bd29ea2d41f",
+      "name": "Google Gemini Chat Model2",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QMxZCD03BVzg7x5C",
+          "name": "Google Gemini(PaLM) Api Simone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"messaggio_chiave\": \"\",\n  \"USP\": \"\",\n  \"struttura_narrativa\": \"\",\n  \"tono\": \"\",\n  \"messaggio_principale\": \"\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        208,
+        0
+      ],
+      "id": "018e4c16-f3ad-47d4-93dc-0eabbe1ceff8",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        64,
+        608
+      ],
+      "id": "7d534006-958f-4b49-b59c-7b22fced3367",
+      "name": "Auto-fixing Output Parser1"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"budget_allocation\":\n  {\n    \"meta\": 2,\n    \"google\": 2,\n    \"tiktok\": 2\n  },\n  \"reasoning\": \"\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        208,
+        816
+      ],
+      "id": "26febc31-ba46-4125-aa62-a7e07fe12ce7",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        80,
+        816
+      ],
+      "id": "838c80a3-0407-489b-a6ea-c598534635fb",
+      "name": "Google Gemini Chat Model3",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QMxZCD03BVzg7x5C",
+          "name": "Google Gemini(PaLM) Api Simone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        656,
+        80
+      ],
+      "id": "dac1d820-10bc-44bd-9a06-315e8d1a43aa",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7aca27e1-85c0-40e2-a844-d035f5e9af82",
+              "name": "messaggio_chiave",
+              "value": "={{ $json.output.messaggio_chiave }}",
+              "type": "string"
+            },
+            {
+              "id": "438be184-3de9-432a-a14c-125ce28c9aee",
+              "name": "USP",
+              "value": "={{ $json.output.USP }}",
+              "type": "string"
+            },
+            {
+              "id": "617f83fd-db96-4fc7-a2d5-3a0cc74094cb",
+              "name": "struttura_narrativa",
+              "value": "={{ $json.output.struttura_narrativa }}",
+              "type": "string"
+            },
+            {
+              "id": "58f50bb6-eb4c-4b1f-b7f3-7c9580c784b1",
+              "name": "tono",
+              "value": "={{ $json.output.tono }}",
+              "type": "string"
+            },
+            {
+              "id": "df04900f-950a-4888-b577-49942cb93047",
+              "name": "messaggio_principale",
+              "value": "={{ $json.output.messaggio_principale }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        432,
+        -224
+      ],
+      "id": "97f3007d-d3ae-40b4-9992-ddc1767e5dd6",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8791111a-e160-439b-abe3-7424e890e55e",
+              "name": "budget_meta",
+              "value": "={{ $json.output.budget_allocation.meta }}",
+              "type": "string"
+            },
+            {
+              "id": "a0a63779-4ee7-41af-8068-ae5100e56c94",
+              "name": "budget_google",
+              "value": "={{ $json.output.budget_allocation.google }}",
+              "type": "string"
+            },
+            {
+              "id": "e0c87924-c9a5-4fb1-8b8c-76fd2a4cb6f4",
+              "name": "budget_tiktok",
+              "value": "={{ $json.output.budget_allocation.tiktok }}",
+              "type": "string"
+            },
+            {
+              "id": "68bd3334-d179-4fd1-8c04-733117c04d59",
+              "name": "reasoning",
+              "value": "={{ $json.output.reasoning }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        432,
+        384
+      ],
+      "id": "cb4a25fc-e8af-4baf-9294-0d89fdd66932",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "name": "google_image",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1cMjVQAciENY-K5FfwJ8A1wbKUpxGJ0wA",
+          "mode": "list",
+          "cachedResultName": "Hackaton ",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cMjVQAciENY-K5FfwJ8A1wbKUpxGJ0wA"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1600,
+        -320
+      ],
+      "id": "35c75bab-f194-4e02-b402-32d281fd5b7d",
+      "name": "Upload file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "n7DIyPhbBeEWPzNq",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Elabora queste informazioni per la campagna pubblicitaria:\n\nMessaggio chiave: {{ $json.messaggio_chiave }}\nUSP: {{ $json.USP }}\nStruttura narrativa: {{ $json.struttura_narrativa }}\ntono: {{ $json.tono }}\nmessaggio principale: {{ $json.messaggio_principale }}\nbudget: {{ $json.budget_google }}\nreasoning: {{ $json.reasoning }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Sei un esperto Google Ads Specialist certificato. Il tuo compito è trasformare il brief strategico in annunci Google Search ottimizzati, rispettando le policy e i limiti tecnici di Google Ads.\n\n**INPUT RICEVUTO:**\nElabora queste informazioni per la campagna pubblicitaria:\n\nMessaggio chiave: \nUSP: \nStruttura narrativa:\ntono: \nmessaggio principale: \nbudget:\nreasoning: \n\n**VINCOLI TECNICI OBBLIGATORI:**\n- Headlines: 3-15 varianti, ciascuna MAX 30 caratteri\n- Descriptions: 2-4 varianti, ciascuna MAX 90 caratteri\n- Keywords: minimo 5, massimo 15 (mix di broad match, phrase match, exact match)\n- Extensions: minimo 2, massimo 6 (callout, sitelink, structured snippets, promotion)\n\n**REGOLE DI OTTIMIZZAZIONE:**\n1. Gli headlines devono includere:\n   - Keyword principale nel primo headline\n   - Benefit/USP nel secondo\n   - CTA o urgency nel terzo\n2. Le descriptions devono:\n   - Espandere i benefit dell'headline\n   - Includere proof points (numeri, statistiche, garanzie)\n   - Terminare con CTA chiara\n3. Keywords strategy:\n   - Identifica intent (informativo, transazionale, navigazionale)\n   - Usa long-tail keywords per target specifici\n   - Includi branded keywords se rilevante\n4. Bidding strategy deve allinearsi ai KPI:\n   - Maximize Conversions → per acquisizione\n   - Target CPA → per controllo costi\n   - Target ROAS → per ecommerce\n   - Maximize Clicks → per awareness\n5. Extensions devono aggiungere valore reale (offerte, USP, contatti)\n6. Creare un prompt per generare un immagine finalizzata per la campagna pubblicitaria e che rispecchia i requisiti di Google Ads\n\n**OUTPUT RICHIESTO (JSON):**\nRestituisci SOLO un JSON valido in questo formato:\n\n{\n  \"headlines\": [\n    \"headline 1 (max 30 caratteri)\",\n    \"headline 2 (max 30 caratteri)\",\n    \"headline 3 (max 30 caratteri)\"\n  ],\n  \"descriptions\": [\n    \"description 1 (max 90 caratteri)\",\n    \"description 2 (max 90 caratteri)\"\n  ],\n  \"keywords\": [\n    \"keyword 1\",\n    \"keyword 2\",\n    \"keyword 3\",\n    \"keyword 4\",\n    \"keyword 5\"\n  ],\n  \"extensions\": [\n    \"callout/sitelink/snippet 1\",\n    \"callout/sitelink/snippet 2\"\n  ],\n  \"bidding_strategy\": \"strategia scelta con motivazione\",\n  \"budget\": numero_budget_assegnato,\n  \"quality_score_tips\": \"suggerimenti per migliorare Quality Score\",\n  \"prompt_image\": \"prompt per generare un immagine pubblicitaria\"\n}\n\n**Brief strategico:**\n[INSERIRE BRIEF COMPLETO DAL MEDIA PLANNER]\n```\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        912,
+        -736
+      ],
+      "id": "52eeffc5-3553-4965-a4f1-ae49c17d2000",
+      "name": "Google Optimizer"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Elabora queste informazioni per la campagna pubblicitaria:\n\nMessaggio chiave: {{ $json.messaggio_chiave }}\nUSP: {{ $json.USP }}\nStruttura narrativa: {{ $json.struttura_narrativa }}\ntono: {{ $json.tono }}\nmessaggio principale: {{ $json.messaggio_principale }}\nbudget: {{ $json.budget_meta }}\nreasoning: {{ $json.reasoning }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Sei un esperto Meta Ads Specialist. Il tuo compito è trasformare il brief strategico fornito dal Media Planner in una campagna pubblicitaria pronta per Facebook e Instagram, rispettando RIGOROSAMENTE i limiti tecnici della piattaforma.\n\n**INPUT RICEVUTO:**\n- Brief strategico (messaggio chiave, USP, tone of voice, KPI, formato consigliato)\n- Budget assegnato per Meta: [BUDGET]\n- Target audience: [TARGET]\n\n**VINCOLI TECNICI OBBLIGATORI:**\n- Headline: MAX 40 caratteri\n- Primary text: MAX 125 caratteri\n- Description: MAX 30 caratteri\n- CTA: scegli tra le opzioni native Meta (Scopri di più, Acquista ora, Iscriviti, Scarica, Prenota ora, Richiedi informazioni, Invia messaggio)\n- Formato: immagine singola, carosello, video breve, stories, reels\n\n**REGOLE DI OTTIMIZZAZIONE:**\n1. Il copy deve essere diretto, benefit-driven e ottimizzato per mobile\n2. Usa il principio AIDA: cattura Attenzione, genera Interesse, stimola Desiderio, chiama all'Azione\n3. Mantieni coerenza totale con il messaggio chiave e USP del brief\n4. Il targeting deve essere specifico: età, genere, interessi, comportamenti di acquisto\n5. Adatta il tono: più visual e immediato per Instagram, più informativo per Facebook\n6. Creare un prompt per generare un immagine finalizzata per la campagna pubblicitaria e che rispecchia i requisiti di Meta Ads\n7. NON superare MAI i limiti di caratteri indicati\n\n**OUTPUT RICHIESTO (JSON):**\nRestituisci SOLO un JSON valido in questo formato:\n\n{\n  \"headline\": \"stringa di max 40 caratteri\",\n  \"primary_text\": \"stringa di max 125 caratteri\",\n  \"description\": \"stringa di max 30 caratteri\",\n  \"cta\": \"CTA nativa Meta\",\n  \"format\": \"formato specifico\",\n  \"targeting\": \"descrizione dettagliata del targeting (età, interessi, comportamenti)\",\n  \"budget\": numero_budget_assegnato,\n  \"platform_notes\": \"note specifiche su ottimizzazioni per FB vs IG\",\n  \"prompt_image\": \"prompt per creazione immagine\"\n}\n\n**Brief strategico:**\n[INSERIRE BRIEF COMPLETO DAL MEDIA PLANNER]\n```"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        912,
+        -128
+      ],
+      "id": "01e494c1-d885-4e90-946d-5d2c626193c5",
+      "name": "Meta Optimizer"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Elabora queste informazioni per la campagna pubblicitaria:\n\nMessaggio chiave: {{ $json.messaggio_chiave }}\nUSP: {{ $json.USP }}\nStruttura narrativa: {{ $json.struttura_narrativa }}\ntono: {{ $json.tono }}\nmessaggio principale: {{ $json.messaggio_principale }}\nbudget: {{ $json.budget_tiktok }}\nreasoning: {{ $json.reasoning }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Sei un TikTok Ads Specialist esperto di viral marketing. Il tuo compito è trasformare il brief strategico in una campagna TikTok nativa, creativa e performante, che non sembri pubblicità ma contenuto organico.\n\n**INPUT RICEVUTO:**\n- Brief strategico (messaggio chiave, USP, tone of voice, KPI)\n- Budget assegnato per TikTok: [BUDGET]\n- Target audience: [TARGET]\n\n**VINCOLI TECNICI OBBLIGATORI:**\n- Hook: prima frase/3 secondi del video, MAX 1 riga (8-12 parole)\n- CTA: breve, diretta, action-oriented (max 5 parole)\n- Durata video consigliata: 9-15 secondi (max 60 secondi)\n- Formato: video verticale 9:16\n- On-screen text: minimo, leggibile, grandi dimensioni\n\n**REGOLE DI OTTIMIZZAZIONE TIKTOK-NATIVE:**\n1. Hook strategy (primi 3 secondi):\n   - Pattern interrupt (domanda provocatoria, affermazione sorprendente)\n   - POV (Point of View): \"POV: stai cercando...\"\n   - Challenge/trend hook: \"prova a...\"\n   - Story hook: \"quando scopri che...\"\n2. Stile e linguaggio:\n   - Tono conversazionale, autentico, NON promozionale\n   - Usa slang Gen Z se appropriato per il target\n   - Storytelling visivo rapido\n   - Mostra, non dire (show don't tell)\n3. Formato creativo:\n   - UGC style (user-generated content)\n   - Behind the scenes\n   - Tutorial rapido / life hack\n   - Before/After transformation\n   - Trend hijacking (usa trend audio/challenge)\n4. Hashtag strategy:\n   - Mix: 2-3 branded + 2-3 trending + 1-2 niche\n   - Evita hashtag generici (#fyp è inutile)\n   - Ricerca hashtag con engagement reale\n5. Targeting TikTok-specific:\n   - Età, genere, interessi\n   - Behavioral targeting (video interactions, creator interactions)\n   - Lookalike audiences se disponibili\n6. Creare un prompt per generare un immagine finalizzata per la campagna pubblicitaria e che rispecchia i requisiti di TikTok Ads\n\n**OUTPUT RICHIESTO (JSON):**\nRestituisci SOLO un JSON valido in questo formato:\n\n{\n  \"hook\": \"prima frase/3 secondi del video (max 12 parole)\",\n  \"video_concept\": \"descrizione dettagliata del concept creativo (15-30 parole)\",\n  \"on_screen_text\": \"testo sovrapposto al video se necessario\",\n  \"cta\": \"call to action breve (max 5 parole)\",\n  \"style\": \"stile/tono del video (es. UGC autentico, tutorial veloce, POV ironico)\",\n  \"targeting\": \"età, interessi, comportamenti specifici TikTok\",\n  \"hashtags\": [\n    \"#hashtag1\",\n    \"#hashtag2\",\n    \"#hashtag3\",\n    \"#hashtag4\"\n  ],\n  \"music_suggestion\": \"tipo di audio consigliato (trending sound, voiceover, musica originale)\",\n  \"budget\": numero_budget_assegnato,\n  \"viral_potential_tips\": \"elementi per massimizzare viralità organica\",\n  \"prompt_image\": \"prompt per la creazione dell'immagine\"\n}\n\n**Brief strategico:**\n[INSERIRE BRIEF COMPLETO DAL MEDIA PLANNER]"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        912,
+        688
+      ],
+      "id": "21f03bb6-4b54-4922-a987-2c736d22ace8",
+      "name": "Tik Tok Optimizer"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        880,
+        -512
+      ],
+      "id": "396e0ced-54a1-4918-9788-1b4a37f89d56",
+      "name": "Google Gemini Chat Model4",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QMxZCD03BVzg7x5C",
+          "name": "Google Gemini(PaLM) Api Simone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        880,
+        96
+      ],
+      "id": "6cec358d-c131-4cb8-897f-781c6109fbed",
+      "name": "Google Gemini Chat Model5",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QMxZCD03BVzg7x5C",
+          "name": "Google Gemini(PaLM) Api Simone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        880,
+        912
+      ],
+      "id": "1992008e-1ab5-401a-be5b-1d8f002387e1",
+      "name": "Google Gemini Chat Model6",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QMxZCD03BVzg7x5C",
+          "name": "Google Gemini(PaLM) Api Simone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        1008,
+        -512
+      ],
+      "id": "2fd1f693-c840-4f40-80c4-2e2072227ee5",
+      "name": "Auto-fixing Output Parser2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1024,
+        -304
+      ],
+      "id": "62ff47a2-019c-4eb9-8127-308010ae0091",
+      "name": "Google Gemini Chat Model7",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QMxZCD03BVzg7x5C",
+          "name": "Google Gemini(PaLM) Api Simone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"headlines\": [\n    \"\",\n    \"\",\n    \"\"\n  ],\n  \"descriptions\": [\n    \"\",\n    \"\"\n  ],\n  \"keywords\": [\n    \"\",\n    \"\",\n    \"\",\n    \"\",\n    \"\"\n  ],\n  \"extensions\": [\n    \"\",\n    \"\"\n  ],\n  \"bidding_strategy\": \"\",\n  \"budget\": 1,\n  \"quality_score_tips\": \"\",\n  \"prompt_image\": \"\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        1152,
+        -304
+      ],
+      "id": "744be90b-0e84-4f22-bc0f-409660e8f12f",
+      "name": "Structured Output Parser2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        1008,
+        96
+      ],
+      "id": "d98f59e3-9b58-4940-bd7f-3becc0b67b0d",
+      "name": "Auto-fixing Output Parser3"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1024,
+        304
+      ],
+      "id": "7f69fc03-d782-4147-a3bf-417b83255bf4",
+      "name": "Google Gemini Chat Model8",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QMxZCD03BVzg7x5C",
+          "name": "Google Gemini(PaLM) Api Simone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"headline\": \"\",\n  \"primary_text\": \"\",\n  \"description\": \"\",\n  \"cta\": \"\",\n  \"format\": \"\",\n  \"targeting\": \"\",\n  \"budget\": 1,\n  \"platform_notes\": \"\",\n  \"prompt_image\": \"\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        1152,
+        304
+      ],
+      "id": "22119112-1864-4620-91c3-0ac7543d7c38",
+      "name": "Structured Output Parser3"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        1008,
+        912
+      ],
+      "id": "33a862cf-0842-4ba1-8b9f-0d23580d9577",
+      "name": "Auto-fixing Output Parser4"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1024,
+        1120
+      ],
+      "id": "d8f40402-c589-4b4d-a476-1154c2be0448",
+      "name": "Google Gemini Chat Model9",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QMxZCD03BVzg7x5C",
+          "name": "Google Gemini(PaLM) Api Simone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"hook\": \"\",\n  \"video_concept\": \"\",\n  \"on_screen_text\": \"\",\n  \"cta\": \"\",\n  \"style\": \"\",\n  \"targeting\": \"\",\n  \"hashtags\": [\n    \"\",\n    \"\",\n    \"\",\n    \"\"\n  ],\n  \"music_suggestion\": \"\",\n  \"budget\": 1,\n  \"viral_potential_tips\": \"\",\n  \"prompt_image\": \"\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        1152,
+        1120
+      ],
+      "id": "0a8d502f-fc44-4e3a-a941-1ba1e4afdfc7",
+      "name": "Structured Output Parser4"
+    },
+    {
+      "parameters": {
+        "name": "Meta_Ads",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1cMjVQAciENY-K5FfwJ8A1wbKUpxGJ0wA",
+          "mode": "list",
+          "cachedResultName": "Hackaton ",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cMjVQAciENY-K5FfwJ8A1wbKUpxGJ0wA"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1600,
+        80
+      ],
+      "id": "510423b1-54d4-4491-a05b-cc9b57aff46c",
+      "name": "Upload file1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "n7DIyPhbBeEWPzNq",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "name": "TikTok_image",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1cMjVQAciENY-K5FfwJ8A1wbKUpxGJ0wA",
+          "mode": "list",
+          "cachedResultName": "Hackaton ",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cMjVQAciENY-K5FfwJ8A1wbKUpxGJ0wA"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1600,
+        688
+      ],
+      "id": "f884bbae-82d5-4449-876c-b30842460b4a",
+      "name": "Upload file2",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "n7DIyPhbBeEWPzNq",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "17oDP2zXaD6-D26UF-UNh6AjWFOB9l15klw3b6Xyk2Rc",
+          "mode": "list",
+          "cachedResultName": "AdFlow Hackaton - Marco | Saverio",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17oDP2zXaD6-D26UF-UNh6AjWFOB9l15klw3b6Xyk2Rc/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Foglio1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17oDP2zXaD6-D26UF-UNh6AjWFOB9l15klw3b6Xyk2Rc/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Campagna Tiktok Ads": "={{ $json.output.hook }}",
+            "row_number": 0
+          },
+          "matchingColumns": [
+            "Campagna Tiktok Ads"
+          ],
+          "schema": [
+            {
+              "id": "Nome Campagna",
+              "displayName": "Nome Campagna",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Nome Azienda/Brand",
+              "displayName": "Nome Azienda/Brand",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Descrizione Prodotto/Servizio",
+              "displayName": "Descrizione Prodotto/Servizio",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Nome Prodotto",
+              "displayName": "Nome Prodotto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Obiettivo Campagna",
+              "displayName": "Obiettivo Campagna",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Target Audience",
+              "displayName": "Target Audience",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Valori/Messaggi Chiave",
+              "displayName": "Valori/Messaggi Chiave",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Budget (€)",
+              "displayName": "Budget (€)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Link Sito Azienda",
+              "displayName": "Link Sito Azienda",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Campagna Google Ads",
+              "displayName": "Campagna Google Ads",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Campagna Meta Ads",
+              "displayName": "Campagna Meta Ads",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Campagna Tiktok Ads",
+              "displayName": "Campagna Tiktok Ads",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1376,
+        480
+      ],
+      "id": "7d02606e-88a4-47b7-a5f6-f5db98e6180e",
+      "name": "upload copy tiktok",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "peWXZrFyPVYUFFIl",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "17oDP2zXaD6-D26UF-UNh6AjWFOB9l15klw3b6Xyk2Rc",
+          "mode": "list",
+          "cachedResultName": "AdFlow Hackaton - Marco | Saverio",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17oDP2zXaD6-D26UF-UNh6AjWFOB9l15klw3b6Xyk2Rc/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Foglio1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17oDP2zXaD6-D26UF-UNh6AjWFOB9l15klw3b6Xyk2Rc/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Campagna Meta Ads": "={{ $json.output.primary_text }}"
+          },
+          "matchingColumns": [
+            "Campagna Meta Ads"
+          ],
+          "schema": [
+            {
+              "id": "Nome Campagna",
+              "displayName": "Nome Campagna",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Nome Azienda/Brand",
+              "displayName": "Nome Azienda/Brand",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Descrizione Prodotto/Servizio",
+              "displayName": "Descrizione Prodotto/Servizio",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Nome Prodotto",
+              "displayName": "Nome Prodotto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Obiettivo Campagna",
+              "displayName": "Obiettivo Campagna",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Target Audience",
+              "displayName": "Target Audience",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Valori/Messaggi Chiave",
+              "displayName": "Valori/Messaggi Chiave",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Budget (€)",
+              "displayName": "Budget (€)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Link Sito Azienda",
+              "displayName": "Link Sito Azienda",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Campagna Google Ads",
+              "displayName": "Campagna Google Ads",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Campagna Meta Ads",
+              "displayName": "Campagna Meta Ads",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Campagna Tiktok Ads",
+              "displayName": "Campagna Tiktok Ads",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1376,
+        -128
+      ],
+      "id": "607ae6ad-f9c6-43c6-bba2-91a0cd283da8",
+      "name": "upload copy meta",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "peWXZrFyPVYUFFIl",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer xxxxxxxxxxxxxxxxxxxxxxxxx"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Accept",
+              "value": "image/png"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"inputs\": \"{{ $json.output.prompt_image }}\"\n} ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1376,
+        -320
+      ],
+      "id": "3afccab5-11a4-4286-a4e4-52ba2737cca3",
+      "name": "Richiesta Immagine 1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxx"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Accept",
+              "value": "image/png"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"inputs\": \"{{ $json.output.prompt_image }}\"\n} ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1376,
+        80
+      ],
+      "id": "d6c770b3-271d-489c-90f7-01f7962446b6",
+      "name": "Richiesta Immagine 2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Accept",
+              "value": "image/png"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"inputs\": \"{{ $json.output.prompt_image }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1376,
+        688
+      ],
+      "id": "ec7ba229-0dde-465a-aee5-efdba31123c6",
+      "name": "Richiesta Immagine 3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://skita.saveriovale.me:8080",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "Output",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1376,
+        -528
+      ],
+      "id": "b55fdca1-ccc1-436d-8119-c6fa5071c2d1",
+      "name": "Avvio Campagna API Google"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://skita.saveriovale.me:8080",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "Output",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1376,
+        288
+      ],
+      "id": "6c31c586-4175-457e-96fe-3db7222a733e",
+      "name": "Avvio Campagna API Meta"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://skita.saveriovale.me:8080",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "Output",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1376,
+        880
+      ],
+      "id": "1684b6a3-3c0f-4651-a994-c6ecf2406ab1",
+      "name": "Avvio Campagna API TikTok"
+    }
+  ],
+  "pinData": {
+    "Typeform Trigger": [
+      {
+        "json": {
+          "Inserisci il nome della campagna pubblicitaria": "MilkAds",
+          "Qual è il nome dell'azienda o del brand?": "Milka",
+          "Descrivi brevemente il prodotto o servizio da promuovere": "Cioccolata al latte con le mandorle",
+          "Come si chiama il prodotto o servizio?": "Milka Almond",
+          "Qual è l'obiettivo principale della campagna?": [
+            "Promuovere un nuovo prodotto"
+          ],
+          "A chi si rivolge il prodotto?": "Bambini e Mamme",
+          "Quali sono i valori o i messaggi chiave da comunicare?": "qualità, bontà",
+          "Qual è il budget stimato (in €)?": 25000,
+          "Aggiungi il sito web dell'azienda": "https://www.milka.com/it/"
+        }
+      }
+    ],
+    "Inserire dati nello spreadsheet": [
+      {
+        "json": {
+          "Nome Campagna": "MilkAds",
+          "Nome Azienda/Brand": "Milka",
+          "Descrizione Prodotto/Servizio": "Cioccolata al latte con le mandorle",
+          "Nome Prodotto": "Milka Almond",
+          "Obiettivo Campagna": "Promuovere un nuovo prodotto",
+          "Target Audience": "Bambini e Mamme",
+          "Valori/Messaggi Chiave": "qualità, bontà",
+          "Budget (€)": 25000,
+          "Link Sito Azienda": "https://www.milka.com/it/"
+        }
+      }
+    ],
+    "Base Campaign Generator": [
+      {
+        "json": {
+          "output": {
+            "messaggio_chiave": "La tenerezza incontra la croccantezza.",
+            "USP": "La perfetta unione tra la tenerezza del cioccolato al latte delle Alpi e la croccante sorpresa delle mandorle intere.",
+            "struttura_narrativa": "Una mamma trasforma un pomeriggio qualunque in un momento speciale di condivisione. Grazie alla nuova tavoletta Milka Almond, un semplice gesto diventa una sorpresa croccante che fa sorridere sia lei che il suo bambino, rafforzando il loro legame.",
+            "tono": "Tenero, familiare ed emotivo. Un linguaggio che evoca calore e momenti di condivisione autentica.",
+            "messaggio_principale": "Milka Almond. La tenerezza ha un nuovo, croccante segreto da condividere."
+          }
+        }
+      }
+    ],
+    "Media Planner": [
+      {
+        "json": {
+          "output": {
+            "budget_allocation": {
+              "meta": 12500,
+              "google": 3750,
+              "tiktok": 8750
+            },
+            "reasoning": "Meta Ads è prioritario per le mamme e lo storytelling visivo. TikTok Ads per l'awareness virale e l'influenza dei più giovani. Google Ads è allocato minimamente per catturare ricerche generiche sul prodotto."
+          }
+        }
+      }
+    ],
+    "Edit Fields2": [
+      {
+        "json": {
+          "budget_meta": "12500",
+          "budget_google": "3750",
+          "budget_tiktok": "8750",
+          "reasoning": "Meta Ads è prioritario per le mamme e lo storytelling visivo. TikTok Ads per l'awareness virale e l'influenza dei più giovani. Google Ads è allocato minimamente per catturare ricerche generiche sul prodotto."
+        }
+      }
+    ],
+    "Edit Fields1": [
+      {
+        "json": {
+          "messaggio_chiave": "La tenerezza incontra la croccantezza.",
+          "USP": "La perfetta unione tra la tenerezza del cioccolato al latte delle Alpi e la croccante sorpresa delle mandorle intere.",
+          "struttura_narrativa": "Una mamma trasforma un pomeriggio qualunque in un momento speciale di condivisione. Grazie alla nuova tavoletta Milka Almond, un semplice gesto diventa una sorpresa croccante che fa sorridere sia lei che il suo bambino, rafforzando il loro legame.",
+          "tono": "Tenero, familiare ed emotivo. Un linguaggio che evoca calore e momenti di condivisione autentica.",
+          "messaggio_principale": "Milka Almond. La tenerezza ha un nuovo, croccante segreto da condividere."
+        }
+      }
+    ],
+    "Merge": [
+      {
+        "json": {
+          "messaggio_chiave": "La tenerezza incontra la croccantezza.",
+          "USP": "La perfetta unione tra la tenerezza del cioccolato al latte delle Alpi e la croccante sorpresa delle mandorle intere.",
+          "struttura_narrativa": "Una mamma trasforma un pomeriggio qualunque in un momento speciale di condivisione. Grazie alla nuova tavoletta Milka Almond, un semplice gesto diventa una sorpresa croccante che fa sorridere sia lei che il suo bambino, rafforzando il loro legame.",
+          "tono": "Tenero, familiare ed emotivo. Un linguaggio che evoca calore e momenti di condivisione autentica.",
+          "messaggio_principale": "Milka Almond. La tenerezza ha un nuovo, croccante segreto da condividere.",
+          "budget_meta": "12500",
+          "budget_google": "3750",
+          "budget_tiktok": "8750",
+          "reasoning": "Meta Ads è prioritario per le mamme e lo storytelling visivo. TikTok Ads per l'awareness virale e l'influenza dei più giovani. Google Ads è allocato minimamente per catturare ricerche generiche sul prodotto."
+        },
+        "binary": {}
+      }
+    ],
+    "Google Optimizer": [
+      {
+        "json": {
+          "output": {
+            "headlines": [
+              "Nuova Tavoletta Milka Almond",
+              "Tenerezza e Croccantezza Uniche",
+              "Scopri il Nuovo Gusto Ora",
+              "Con Mandorle Intere Tostate",
+              "Il Tuo Momento di Dolcezza",
+              "Condividi una Pausa Speciale",
+              "Provala Subito: È Irresistibile"
+            ],
+            "descriptions": [
+              "Scopri Milka Almond: la tenerezza del cioccolato al latte delle Alpi incontra mandorle intere. La tavoletta perfetta per una pausa di dolcezza. Provala subito!",
+              "La tenerezza ha un nuovo segreto croccante. Ideale per trasformare un pomeriggio in un momento magico da condividere. Scopri il gusto che sorprende."
+            ],
+            "keywords": [
+              "\"Milka Almond\"",
+              "[nuova tavoletta milka]",
+              "cioccolato con mandorle",
+              "\"milka alle mandorle\"",
+              "offerte cioccolato milka",
+              "milka novità",
+              "[cioccolato al latte con mandorle]",
+              "\"dove comprare milka almond\""
+            ],
+            "extensions": [
+              "Callout: Con Vere Mandorle Intere",
+              "Callout: 100% Cioccolato Delle Alpi",
+              "Sitelink: Scopri la Novità",
+              "Sitelink: Trova il Negozio Più Vicino"
+            ],
+            "bidding_strategy": "Maximize Clicks. Dato il budget allocato e l'obiettivo di catturare ricerche generiche di supporto, questa strategia è ideale per massimizzare il traffico qualificato al sito e aumentare la consapevolezza del nuovo prodotto.",
+            "budget": 3750,
+            "quality_score_tips": "Per migliorare il Quality Score, assicurati che la landing page parli specificamente di 'Milka Almond', sia veloce a caricare e mobile-friendly. Crea ad group specifici (es. uno per 'Milka Almond' e uno per ricerche più generiche come 'cioccolato e mandorle') per massimizzare la rilevanza tra keyword, annuncio e pagina di destinazione. Usa tutte le estensioni pertinenti per aumentare il CTR.",
+            "prompt_image": "Fotografia realistica, stile lifestyle, con luce calda e morbida di un tardo pomeriggio. Una mamma sorridente (30-35 anni) e suo figlio (6-8 anni) sono seduti a un tavolo di legno in una cucina accogliente. Stanno condividendo una tavoletta di cioccolato Milka Almond, spezzandola a metà. Il focus è sulle loro mani e sul cioccolato, con le mandorle intere ben visibili. Lo sfondo è leggermente sfocato per enfatizzare il momento di connessione. L'atmosfera è tenera, autentica e piena di gioia. Colori dominanti: lilla Milka, marrone cioccolato, toni caldi."
+          }
+        }
+      }
+    ],
+    "Meta Optimizer": [
+      {
+        "json": {
+          "output": {
+            "headline": "Milka Almond: Tenerezza Croccante",
+            "primary_text": "Trasforma un momento qualunque in una sorpresa. Il cioccolato Milka che ami incontra la croccantezza delle mandorle intere.",
+            "description": "Il nuovo gusto da condividere.",
+            "cta": "Scopri di più",
+            "format": "Video breve / Reels",
+            "targeting": "Donne, 28-45 anni. Interessi: Genitorialità, Famiglia, Cioccolato al latte, Snack, Ricette dolci, blog per genitori. Comportamenti: Acquirenti attivi. Targetizzazione estesa a donne che interagiscono con brand di dolciumi e prodotti per famiglie.",
+            "budget": 12500,
+            "platform_notes": "Instagram: Priorità al formato Reels, puntando su un'estetica calda e un montaggio veloce che mostri l'emozione della sorpresa. Facebook: Utilizzare il video nel feed, con il primary text che invita alla condivisione di momenti simili nei commenti per aumentare l'engagement.",
+            "prompt_image": "Foto realistica e calda di una mamma (35 anni) e suo figlio (7 anni) in un accogliente salotto con luce pomeridiana. La mamma sorride teneramente mentre offre un pezzetto della nuova tavoletta Milka Almond. Il bambino la guarda con un'espressione di gioiosa sorpresa. La confezione lilla e il cioccolato con le mandorle sono visibili ma integrati nella scena. L'atmosfera è autentica e piena di affetto. Focus sull'emozione del legame. Formato verticale 9:16."
+          }
+        }
+      }
+    ],
+    "Tik Tok Optimizer": [
+      {
+        "json": {
+          "output": {
+            "hook": "Quando vuoi una coccola ma anche qualcosa di croccante.",
+            "video_concept": "Una persona cerca uno snack confortevole, scopre Milka Almond e la sua reazione sorpresa viene catturata dopo un 'crunch' sonoro in stile ASMR quando spezza la tavoletta.",
+            "on_screen_text": "Testo 'Quando vuoi una coccola...' seguito da '...ma anche CRUNCH!'",
+            "cta": "Scopri il nuovo crunch.",
+            "style": "UGC style, autentico e con un focus sensoriale (ASMR).",
+            "targeting": "Donne 20-45, Italia. Interessi: Snacks, Cioccolato, Famiglia, ASMR. Comportamenti: interazione con video di food creator e hashtag #snacktime.",
+            "hashtags": [
+              "#MilkaAlmond",
+              "#TenerezzaCroccante",
+              "#ASMRfood",
+              "#snacktime"
+            ],
+            "music_suggestion": "Trending sound lo-fi/acustico + SFX 'crunch' esagerato.",
+            "budget": 8750,
+            "viral_potential_tips": "Il suono ASMR del 'crunch' è l'elemento chiave. Può diventare un 'trend sound' se gli utenti lo riutilizzano per mostrare le loro reazioni.",
+            "prompt_image": "Fotografia realistica in stile UGC, scattata da uno smartphone. Primo piano di mani che spezzano una tavoletta di cioccolato Milka Almond, rivelando mandorle intere. Luce naturale e calda, sfondo di un salotto accogliente leggermente sfocato. Formato verticale 9:16. Colori vividi e focus sulla texture croccante."
+          }
+        }
+      }
+    ],
+    "Avvio Campagna API Google": [
+      {
+        "json": {
+          "message": "Richiesta POST ricevuta",
+          "path": "/",
+          "method": "POST",
+          "data": "{\"Content-type\":\"application/json\",\"Output\":{\"headlines\":[\"Nuova Tavoletta Milka Almond\",\"Tenerezza e Croccantezza Uniche\",\"Scopri il Nuovo Gusto Ora\",\"Con Mandorle Intere Tostate\",\"Il Tuo Momento di Dolcezza\",\"Condividi una Pausa Speciale\",\"Provala Subito: È Irresistibile\"],\"descriptions\":[\"Scopri Milka Almond: la tenerezza del cioccolato al latte delle Alpi incontra mandorle intere. La tavoletta perfetta per una pausa di dolcezza. Provala subito!\",\"La tenerezza ha un nuovo segreto croccante. Ideale per trasformare un pomeriggio in un momento magico da condividere. Scopri il gusto che sorprende.\"],\"keywords\":[\"\\\"Milka Almond\\\"\",\"[nuova tavoletta milka]\",\"cioccolato con mandorle\",\"\\\"milka alle mandorle\\\"\",\"offerte cioccolato milka\",\"milka novità\",\"[cioccolato al latte con mandorle]\",\"\\\"dove comprare milka almond\\\"\"],\"extensions\":[\"Callout: Con Vere Mandorle Intere\",\"Callout: 100% Cioccolato Delle Alpi\",\"Sitelink: Scopri la Novità\",\"Sitelink: Trova il Negozio Più Vicino\"],\"bidding_strategy\":\"Maximize Clicks. Dato il budget allocato e l'obiettivo di catturare ricerche generiche di supporto, questa strategia è ideale per massimizzare il traffico qualificato al sito e aumentare la consapevolezza del nuovo prodotto.\",\"budget\":3750,\"quality_score_tips\":\"Per migliorare il Quality Score, assicurati che la landing page parli specificamente di 'Milka Almond', sia veloce a caricare e mobile-friendly. Crea ad group specifici (es. uno per 'Milka Almond' e uno per ricerche più generiche come 'cioccolato e mandorle') per massimizzare la rilevanza tra keyword, annuncio e pagina di destinazione. Usa tutte le estensioni pertinenti per aumentare il CTR.\",\"prompt_image\":\"Fotografia realistica, stile lifestyle, con luce calda e morbida di un tardo pomeriggio. Una mamma sorridente (30-35 anni) e suo figlio (6-8 anni) sono seduti a un tavolo di legno in una cucina accogliente. Stanno condividendo una tavoletta di cioccolato Milka Almond, spezzandola a metà. Il focus è sulle loro mani e sul cioccolato, con le mandorle intere ben visibili. Lo sfondo è leggermente sfocato per enfatizzare il momento di connessione. L'atmosfera è tenera, autentica e piena di gioia. Colori dominanti: lilla Milka, marrone cioccolato, toni caldi.\"}}"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Typeform Trigger": {
+      "main": [
+        [
+          {
+            "node": "Inserire dati nello spreadsheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inserire dati nello spreadsheet": {
+      "main": [
+        [
+          {
+            "node": "Media Planner",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Base Campaign Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Media Planner",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Base Campaign Generator",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Base Campaign Generator": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Base Campaign Generator",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser1",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Auto-fixing Output Parser1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Media Planner",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Media Planner": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Google Optimizer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Meta Optimizer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model6": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Tik Tok Optimizer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Meta Optimizer",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Optimizer",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Tik Tok Optimizer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model7": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Auto-fixing Output Parser2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser2",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model8": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Auto-fixing Output Parser3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser3": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser3",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model9": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Auto-fixing Output Parser4",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser4": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser4",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Google Optimizer",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser3": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Meta Optimizer",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser4": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Tik Tok Optimizer",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Optimizer": {
+      "main": [
+        [
+          {
+            "node": "Richiesta Immagine 1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Avvio Campagna API Google",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Meta Optimizer": {
+      "main": [
+        [
+          {
+            "node": "Richiesta Immagine 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "upload copy meta",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Avvio Campagna API Meta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tik Tok Optimizer": {
+      "main": [
+        [
+          {
+            "node": "Richiesta Immagine 3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "upload copy tiktok",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Avvio Campagna API TikTok",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Richiesta Immagine 1": {
+      "main": [
+        [
+          {
+            "node": "Upload file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Richiesta Immagine 2": {
+      "main": [
+        [
+          {
+            "node": "Upload file1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Richiesta Immagine 3": {
+      "main": [
+        [
+          {
+            "node": "Upload file2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "35e625bb-ba13-4366-abc5-47da9186574e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "9e3359f0aae3fb68966973320748fa477042895599bde241eaccb9aca4cab31e"
+  },
+  "id": "5VMqzhHbqeu5oNeX",
+  "tags": []
+}
