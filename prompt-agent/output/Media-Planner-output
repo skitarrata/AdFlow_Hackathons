@@ -1,0 +1,12 @@
+[
+  {
+    "output": {
+      "budget_allocation": {
+        "meta": 12500,
+        "google": 3750,
+        "tiktok": 8750
+      },
+      "reasoning": "Meta Ads è prioritario per le mamme e lo storytelling visivo. TikTok Ads per l'awareness virale e l'influenza dei più giovani. Google Ads è allocato minimamente per catturare ricerche generiche sul prodotto."
+    }
+  }
+]

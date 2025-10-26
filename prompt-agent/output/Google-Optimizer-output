@@ -1,0 +1,39 @@
+[
+  {
+    "output": {
+      "headlines": [
+        "Nuova Tavoletta Milka Almond",
+        "Tenerezza e Croccantezza Uniche",
+        "Scopri il Nuovo Gusto Ora",
+        "Con Mandorle Intere Tostate",
+        "Il Tuo Momento di Dolcezza",
+        "Condividi una Pausa Speciale",
+        "Provala Subito: È Irresistibile"
+      ],
+      "descriptions": [
+        "Scopri Milka Almond: la tenerezza del cioccolato al latte delle Alpi incontra mandorle intere. La tavoletta perfetta per una pausa di dolcezza. Provala subito!",
+        "La tenerezza ha un nuovo segreto croccante. Ideale per trasformare un pomeriggio in un momento magico da condividere. Scopri il gusto che sorprende."
+      ],
+      "keywords": [
+        "\"Milka Almond\"",
+        "[nuova tavoletta milka]",
+        "cioccolato con mandorle",
+        "\"milka alle mandorle\"",
+        "offerte cioccolato milka",
+        "milka novità",
+        "[cioccolato al latte con mandorle]",
+        "\"dove comprare milka almond\""
+      ],
+      "extensions": [
+        "Callout: Con Vere Mandorle Intere",
+        "Callout: 100% Cioccolato Delle Alpi",
+        "Sitelink: Scopri la Novità",
+        "Sitelink: Trova il Negozio Più Vicino"
+      ],
+      "bidding_strategy": "Maximize Clicks. Dato il budget allocato e l'obiettivo di catturare ricerche generiche di supporto, questa strategia è ideale per massimizzare il traffico qualificato al sito e aumentare la consapevolezza del nuovo prodotto.",
+      "budget": 3750,
+      "quality_score_tips": "Per migliorare il Quality Score, assicurati che la landing page parli specificamente di 'Milka Almond', sia veloce a caricare e mobile-friendly. Crea ad group specifici (es. uno per 'Milka Almond' e uno per ricerche più generiche come 'cioccolato e mandorle') per massimizzare la rilevanza tra keyword, annuncio e pagina di destinazione. Usa tutte le estensioni pertinenti per aumentare il CTR.",
+      "prompt_image": "Fotografia realistica, stile lifestyle, con luce calda e morbida di un tardo pomeriggio. Una mamma sorridente (30-35 anni) e suo figlio (6-8 anni) sono seduti a un tavolo di legno in una cucina accogliente. Stanno condividendo una tavoletta di cioccolato Milka Almond, spezzandola a metà. Il focus è sulle loro mani e sul cioccolato, con le mandorle intere ben visibili. Lo sfondo è leggermente sfocato per enfatizzare il momento di connessione. L'atmosfera è tenera, autentica e piena di gioia. Colori dominanti: lilla Milka, marrone cioccolato, toni caldi."
+    }
+  }
+]

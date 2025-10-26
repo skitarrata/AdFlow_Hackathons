@@ -6,7 +6,9 @@
 
 **AdFlow è un’automazione di IA generativa che semplifica e potenzia la gestione delle campagne pubblicitarie multi piattaforma** come Google Ads, Meta Ads e TikTok Ads. Grazie a un sistema di agenti intelligenti, AdFlow crea, ottimizza e aggiorna automaticamente le inserzioni, massimizzando i risultati e riducendo il tempo dedicato alla gestione manuale delle campagne.
 
-Challenge di riferimento: **Bhblasted - Campaign Syncer: Automating Multi-Platform Advertising Campaigns** 
+Challenge di riferimento: **Bhblasted - Campaign Syncer: Automating Multi-Platform Advertising Campaigns**
+[Link Video](https://www.canva.com/design/DAG20b5aXhk/g7KIClctVi2Vtv2XzwlheQ/watch?utm_content=DAG20b5aXhk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcdab62b4ae)
+ 
 ## Prerequisiti
 - Docker e Docker Compose installati
 - Account per i servizi e API: 
